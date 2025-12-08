@@ -108,13 +108,14 @@ $(document).ready(function () {
 
   // Manejar respuesta incorrecta
   function handleIncorrectAnswer(problem, userAnswer) {
-      operationsList.push({
+      if (currentProblem < problems.length) {
+        operationsList.push({
         text: `${problem.y}% de ${problem.x} = ${userAnswer} (Correcta: ${problem.correctAnswer})`,
         correct: false
       });
       currentProblem++;
       showProblem();
-  }
+  }}
 
   // Actualizar la lista de operaciones
   function updateOperationsList() {

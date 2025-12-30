@@ -33,9 +33,9 @@ $(document).ready(function () {
   // Generar problemas según el nivel seleccionado
   function generateProblems(level) {
     var aleatorio = level;
-    for (let i = 0; i < 5; i++) {     // Poner aquí número de operaciones
+    for (let i = 0; i < 120; i++) {     // Poner aquí número de operaciones
      if (aleatorio === 6)
-      {  level = Math.floor(Math.random() * 4) + 1  };
+      {  level = Math.floor(Math.random() * 5) + 1  };
       let x = generateIntegerX(level);
       let y = generateIntegerY(level);
       let correctAnswer = x * y / 100;
